@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT } from "../../actionsTypes/counterActionsTypes";
+import { DECREMENT, INCREMENT, RESET } from "../../actionsTypes/counterActionsTypes";
 
 const initialState = {
   value: 0,
@@ -9,12 +9,17 @@ export default (state = initialState, action) => {
     case DECREMENT:
       return {
         ...state,
-        value: state.value - 1,
+        value: state.value-1,
       };
     case INCREMENT:
       return {
         ...state,
         value: state.value + 1,
+      };
+      case RESET:
+      return {
+        ...state,
+        value: 0,
       };
     default:
       return state;

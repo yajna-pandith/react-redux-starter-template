@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT } from "../../actionsTypes/counterActionsTypes";
+import { DECREMENT, INCREMENT, RESET} from "../../actionsTypes/counterActionsTypes";
 
 export const increaseValue = () => {
   return (dispatch) => {
@@ -15,3 +15,12 @@ export const decreaseValue = () => {
     });
   };
 };
+
+export const resetValue = () => {
+  return (dispatch) => {
+    dispatch({
+      type: RESET,
+    });
+  };
+};
+
